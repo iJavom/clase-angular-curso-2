@@ -1,0 +1,77 @@
+
+<div class="container">
+  <hr>
+  <div class="row">
+    <h3>Ejercicio components y binding</h3>
+  </div>
+  <div class="row">
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="valorCalculadoraMostrado"
+        (change)="escribirNumero(valorCalculadoraMostrado)"
+        name="calculadora"
+        id="calculadora"
+        placeholder=""
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('7')">7</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('8')">8</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('9')">9</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="capturarOperador('/')">/</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('4')">4</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('5')">5</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('6')">6</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary mb-3 w-100" (click)="capturarOperador('X')">X</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('1')">1</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('2')">2</button>
+    </div>
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('3')">3</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary mb-3 w-100" (click)="capturarOperador('-')">-</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <button type="button" class="btn btn-primary mb-3 w-100" (click)="escribirNumero('0')">0</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary mb-3 w-100" (click)="reiniciar()">AC</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary mb-3 w-100" (click)="realizarOperacion()">=</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary mb-3 w-100" (click)="capturarOperador('+')">+</button>
+    </div>
+  </div>
+  <hr>
+</div>

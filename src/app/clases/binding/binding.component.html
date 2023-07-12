@@ -37,7 +37,7 @@
     </div>
     <div class="row">
         <div class="col-md-9">
-            <p>Es el mecanismo de angular para definir o enlazar propiedades del html desde nuestro codigo logico (ts)</p>
+            <p>Es el mecanismo de angular para definir o enlazar propiedades del html desde nuestro codigo logico (ts) con los simbolos de corchetes "[" y "]"</p>
         </div>
         <div class="col-md-3">
             <h4>Ejemplo:</h4>
@@ -52,6 +52,40 @@
             </ul>
         </div>
 
+    </div>
+    <hr>
+    <div class="row">
+        <h3>Event binding</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Es un mecanismo de angular que sirve para subscribirse a los eventos realizados en el html y comunicarlos hacia el TS con los simbolos de parentesis "(" y ")"</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <ul>
+                <li><button class="btn btn-primary" (click)="saludar()">Dame click para saludar</button></li>
+                <li><input type="text" (change)="cambiarMensaje()"></li>
+                <li><button class="btn btn-success" (click)="mensajeBoton='Me clickaste'">{{mensajeBoton}}</button></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <h3>Two-way binding</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Es el mecanismo que nos da angular para comunicar de manera bidireccional nuestro modelo o en otras palabras comunicar los datos del ts al html e inverso.</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <ul>
+                <li><input type="text" [(ngModel)]="unaVariableTwoWay" name="unaVariableTwoWay"></li>
+                <li>{{unaVariableTwoWay}}</li>
+            </ul>
+
+        </div>
     </div>
     <br>
     <br>
