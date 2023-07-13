@@ -1,7 +1,5 @@
-<h1>Hola soy app y soy el componente principal</h1>
-<app-componentes></app-componentes>
-<app-binding></app-binding>
-<!-- control + k y luego control +c -->
-<!-- control + k y luego control + u -->
-<app-ejercicio-calculadora></app-ejercicio-calculadora>
-<app-directives></app-directives>
+<app-clases *ngIf="mostrarClase"></app-clases>
+<app-tienda *ngIf="!mostrarClase"></app-tienda>
+
+<button *ngIf="!mostrarClase" (click)="mostrarClase = !mostrarClase" class="btn btn-primary boton-pagina">i</button>
+<button *ngIf="mostrarClase" (click)="mostrarClase = !mostrarClase" class="btn btn-info boton-pagina">X</button>

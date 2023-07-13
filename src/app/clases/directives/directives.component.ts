@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
 
+  mostrarImagen = false;
+  unArray = ["a","b","c","d"]
+  status ="Listo"
+
+  aplicarBootstrap = true;
+
+
+  altura=50
+  color="red"
   constructor() { }
 
   ngOnInit(): void {

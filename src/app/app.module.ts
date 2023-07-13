@@ -8,6 +8,13 @@ import { BindingComponent } from './clases/binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { EjercicioCalculadoraComponent } from './clases/ejercicio-calculadora/ejercicio-calculadora.component';
 import { DirectivesComponent } from './clases/directives/directives.component';
+import { ClasesComponent } from './clases/clases.component';
+import { TiendaComponent } from './tienda/tienda.component';
+import { NavbarComponent } from './tienda/navbar/navbar.component';
+import { InicioComponent } from './tienda/inicio/inicio.component';
+import { CatalogoComponent } from './tienda/catalogo/catalogo.component';
+import { NosotrosComponent } from './tienda/nosotros/nosotros.component';
+import { ContactanosComponent } from './tienda/contactanos/contactanos.component';
 
 
 @NgModule({
@@ -16,7 +23,14 @@ import { DirectivesComponent } from './clases/directives/directives.component';
     ComponentesComponent,
     BindingComponent,
     EjercicioCalculadoraComponent,
-    DirectivesComponent
+    DirectivesComponent,
+    ClasesComponent,
+    TiendaComponent,
+    NavbarComponent,
+    InicioComponent,
+    CatalogoComponent,
+    NosotrosComponent,
+    ContactanosComponent
   ],
   imports: [
     BrowserModule,

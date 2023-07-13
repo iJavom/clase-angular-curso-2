@@ -13,4 +13,115 @@
             <li>Attribute directives: Nos permiten cambiar el estilo de los elementos. Ejemplo: NgClass</li>
         </ul>
     </div>
+    <hr>
+    <div class="row">
+        <h4>Directivas estructurales</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Para definir como sera la estructura de nuestro template</p>
+            <br>
+            <p>Su sintaxis generalmente es dada por *nombreAtributo="condicion"</p>
+        </div>
+    </div>
+    <div class="row">
+        <h5>*ngIf</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Nos sirven para definir si algo se va a renderizar o no en el template</p>
+            <br>
+            <p>La sintaxis es -> *ngIf="booleano"</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo</h5>
+            <button class="btn  btn-primary" (click)="mostrarImagen = !mostrarImagen"> Clickame para mostrar/ocultar imagen</button>
+            <img *ngIf="mostrarImagen" src="https://http2.mlstatic.com/D_NQ_NP_786391-MCO48637446271_122021-O.webp" alt="un husky" style="width: 100%;">
+        </div>
+    </div>
+    <div class="row">
+        <h5>*ngFor</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>El ngFor sirve para renderizar tantos elementos como tenga un array que se le especifique</p>
+            <br>
+            <p>La sintaxis es la siguiente -> *ngFor="let item of array;let i=index"</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo:</h5>
+            <ul>
+                <li *ngFor="let letra of unArray;let i = index; first as esPrimero">
+                    <strong (click)="unArray.splice(i,1)">{{i}} - {{letra}}</strong> {{esPrimero}}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <h5>*ngSwitch</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Permite agregar o eliminar elementos del dom dependiendo de una expresion. </p>
+            <br>
+            <p>La sintaxis consta de 3 directivas</p>
+            [ngSwitch]="expresion"
+            <br>
+            *ngSwitchCase="valor"
+            <br>
+            *ngSwitchDefault 
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo:</h5>
+            <div [ngSwitch]="status">
+                <p *ngSwitchCase="'En proceso'">Pedido en proceso</p>
+                <p *ngSwitchCase="'Listo'">Pedido listo</p>
+                <p *ngSwitchCase="'Entregado'">Pedido entregado</p>
+                <p *ngSwitchDefault>Estado desconocido</p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <h4>Directivas de atributos</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            Son aquellas directivas que nos permiten darle valores especiales a nuestros atributos , generalmente se saben que son estructurale porque vienen acompañadas de "[" "]" (Usan el property binding)
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo:</h5>
+            <button class="btn  btn-primary" (click)="mostrarImagen = !mostrarImagen"> Clickame para mostrar/ocultar imagen</button>
+            <img [hidden]="mostrarImagen" src="https://http2.mlstatic.com/D_NQ_NP_786391-MCO48637446271_122021-O.webp" alt="un husky" style="width: 100%;">
+        </div>
+    </div>
+    <div class="row">
+        <h5>ngClass</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Es una directiva de atributo que sirve para añadir, modificar o eliminar los valores de la clase de una etiqueta</p>
+            <br>
+            <p>La sintaxis de la directiva es [ngClass]="{{'{'}}'nombre-clase': expresion , 'nombre-clase-2': expresion2{{'}'}}"</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo:</h5>
+            <button [ngClass]="{'btn':aplicarBootstrap , 'btn-primary': aplicarBootstrap}" (click)="aplicarBootstrap = !aplicarBootstrap">Clickame para quitar el estilo</button>
+        </div>
+    </div>
+    <div class="row">
+        <h5>ngStyle</h5>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>Es una directiva de atributo que sirve para añadir,modificar o eliminar estilos de nuestra etiqueta</p>
+            <br>
+            <p>La sintaxis de la directiva es [ngStyle]="'prop1':variableString, 'prop2': variableString2"</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Ejemplo:</h5>
+            <input type="number" [(ngModel)]="altura">
+            <div class="cuadrado" [ngStyle]="{'height':altura+'px' , 'background-color':color}"></div>
+        </div>
+    </div>
 </div>
