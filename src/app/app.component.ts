@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'clase-angular-curso-2';
   unaVariable = "Hola";
   mostrarClase = false;
+
 }

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <h3>Comunicacion entre componentes</h3>
+    </div>
+
+
+    <div class="row">
+        <h3>Referencias locales</h3>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <p>Son variables que se definen en nuestro mismo template. Gracias a ellas podemos hacer referencias de los elementos del DOM o Componentes y la podemos usar para los metodos seleccionados</p>
+            <br>
+            <p>La sintaxis solo es poner "#" antes del nombre del atributo</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo</h4>
+            <input #inputReferenciaLocal type="text" placeholder="Escribe algo">
+            <button class="btn btn-primary" (click)="saludar(inputReferenciaLocal)"> Imprime Alerta</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>@Input (property binding)</h3>
+        <div class="col-md-9">
+            <p>Es un decorador que va exclusivamente en el ts y permite que cuando nosotros invoquemos nuestro componente adicionalmente podamos especificarle valores a nuestro input, para hacer la comunicacion necesitamos en el componente que invoca usar el property binding</p>
+
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <p>{{invocoElInput}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <h3>@Output (event binding)</h3>
+        <div class="col-md-9">
+            <p>Es un decorador que se usa exclusivamente en el ts y permite capturar eventos de un componente hijo para enviarselos al componente padre. Para hacer la comunicacion necesitamos en el componente que invoca usar un event binding</p>
+
+        </div>
+
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <button (click)="emitirEvento()" class="btn btn-success">Avisar al componente padre</button>
+        </div>
+    </div>
+    <hr>
+</div>

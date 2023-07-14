@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TiendaComponent implements OnInit {
 
+  ruta ="inicio";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  escogerPagina(rutaDesdeHijo:string){
+    this.ruta = rutaDesdeHijo;
   }
 
 }

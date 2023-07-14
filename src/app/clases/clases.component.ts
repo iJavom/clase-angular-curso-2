@@ -12,4 +12,7 @@ export class ClasesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  fuiLlamado(param:string){
+    alert(param);
+  }
 }

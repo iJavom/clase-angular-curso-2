@@ -2,6 +2,10 @@
 <app-binding></app-binding>
 <app-ejercicio-calculadora></app-ejercicio-calculadora>
 <app-directives></app-directives>
-
+<app-ciclos-vida></app-ciclos-vida>
+<app-comunicacion-componentes 
+    [invocoElInput]="'Hola me invoque'"
+    (llamoAlPadre)="fuiLlamado($event)"
+    ></app-comunicacion-componentes>
 <!-- control + k y luego control +c -->
 <!-- control + k y luego control + u -->

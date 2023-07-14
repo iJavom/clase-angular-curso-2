@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li *ngFor="let elemento of menu" class="nav-item">
-            <a class="nav-link">{{elemento.nombre}}</a>
+            <a (click)="cambiarPagina(elemento.ruta)" class="nav-link">{{elemento.nombre}}</a>
           </li>
         </ul>
       </div>
