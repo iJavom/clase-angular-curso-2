@@ -17,6 +17,7 @@ import { NosotrosComponent } from './tienda/nosotros/nosotros.component';
 import { ContactanosComponent } from './tienda/contactanos/contactanos.component';
 import { CiclosVidaComponent } from './clases/ciclos-vida/ciclos-vida.component';
 import { ComunicacionComponentesComponent } from './clases/comunicacion-componentes/comunicacion-componentes.component';
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { ComunicacionComponentesComponent } from './clases/comunicacion-componen
     NosotrosComponent,
     ContactanosComponent,
     CiclosVidaComponent,
-    ComunicacionComponentesComponent
+    ComunicacionComponentesComponent,
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,
