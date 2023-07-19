@@ -7,6 +7,8 @@ import { InicioComponent } from './tienda/inicio/inicio.component';
 import { CatalogoComponent } from './tienda/catalogo/catalogo.component';
 import { NosotrosComponent } from './tienda/nosotros/nosotros.component';
 import { ContactanosComponent } from './tienda/contactanos/contactanos.component';
+import { RoutejemUnoComponent } from './clases/routing/routejem-uno/routejem-uno.component';
+import { RoutejemDosComponent } from './clases/routing/routejem-dos/routejem-dos.component';
 
 const routes: Routes = [
 
@@ -15,7 +17,12 @@ const routes: Routes = [
   //3.- Ruta principal: Que son aquellas rutas que no tienen path
   //4.- Rutas anidadas: Que son aquellas rutas que importan modulos y declaran componentes hijos
   //5.- Ruta 404 / No se consiguio: Que es donde redirige todo en caso de no conseguir algun path
-  {path: 'clase' , component: ClasesComponent},
+  {path: 'clase' , component: ClasesComponent, children:[
+    {path: 'ruteo-1/:paramProfe', component: RoutejemUnoComponent},
+    {path: 'ruteo-1', component: RoutejemUnoComponent},
+    {path: 'ruteo-2', component: RoutejemDosComponent},
+    {path: '', component: RoutejemUnoComponent}
+  ]},
   {path: '', redirectTo: 'tienda', pathMatch: 'full'},
   {path: 'tienda', component: TiendaComponent, children:[
     {path:'inicio', component: InicioComponent},

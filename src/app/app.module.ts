@@ -18,6 +18,12 @@ import { ContactanosComponent } from './tienda/contactanos/contactanos.component
 import { CiclosVidaComponent } from './clases/ciclos-vida/ciclos-vida.component';
 import { ComunicacionComponentesComponent } from './clases/comunicacion-componentes/comunicacion-componentes.component';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
+import { RoutingComponent } from './clases/routing/routing.component';
+import { RoutejemUnoComponent } from './clases/routing/routejem-uno/routejem-uno.component';
+import { RoutejemDosComponent } from './clases/routing/routejem-dos/routejem-dos.component';
+import { ModelsComponent } from './clases/models/models.component';
+import { ServicesComponent } from './clases/services/services.component';
+import { EjemploService } from './shared/services/ejemplo.service';
 
 
 @NgModule({
@@ -36,14 +42,19 @@ import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
     ContactanosComponent,
     CiclosVidaComponent,
     ComunicacionComponentesComponent,
-    NoEncontradoComponent
+    NoEncontradoComponent,
+    RoutingComponent,
+    RoutejemUnoComponent,
+    RoutejemDosComponent,
+    ModelsComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EjemploService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

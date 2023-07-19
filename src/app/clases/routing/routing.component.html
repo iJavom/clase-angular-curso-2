@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row">
+        <h4>Routing</h4>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <p>El routing es un modulo de angular que nos permite aprovechar el direccionamiento de los navegador y gracias a esto podemos definir que componente vamos a usar o que modulo debemos cargar</p>
+            <br>
+            <p>
+                Se apoya de los modulos para importarse y se crea en un archivo con la nomenclatura "nombre-routing.module.ts" y siempre viene acompañado de un module
+            </p>
+            <br>
+            <p>
+                Dentro del archivo encontraremos la misma estructura que se maneja para la mayoria de los ts, la primera se importa, la segunda parte tenemos nuestra constante que esta el array de los componentes en forma de objeto que vamos a usar y rutear.En el ultimo vienen codigo que es para nuestro angular con su respectivo export class.
+            </p>
+
+            <h6>Estructura del objeto</h6>
+            <p>
+                el path (La ruta con la que accedemos a lo que indiquemos), component (que es el component que nosotros creamos), children (que sirve para usar un router outlet dentro de nuestro componente), otros opcionales son redirectTo y el pathmatch
+            </p>
+            <br>
+            <p>Una vez bien definido nuestro array de routes nosotros podemos hacer uso de nuestro "router-outlet"</p>
+            <h6>Navegacion entre componentes</h6>
+            <p>Si nosotros deseamos navegar podemos hacerlo desde el html o en el ts</p>
+            <ul>
+                <li>Html: Usamos el "[routerLink]" donde ponemos nuestra ruta (recuerden que para usar ruta absoluta iniciamos con "/")</li>
+                <li>TS: Importamos de router de @angular/router, lo declaramos en el constructor y lo llamos con le metodo "".navigateByUrl('Inserte-path-aqui')"</li>
+            </ul>
+            <br>
+            <p>La directiva [routerLinkActive] sirve para añadir clases siempre y cuando tenga un routerLink en relacion directa para poder evaluar si nuestra ruta esta activa en ese momento y añadir la clase css</p>
+            <br>
+            <h4>Ruteo con parametros</h4>
+            <p>Si nosotros necesitamos hacer uso de parametros nosotros podemos añadir dentro de nuestro archivo router especificamente en el path unos parametros, de forma que podamos dar indicaciones gracias a la navegacion y con nuestra libreria ActivatedRoute podemos darle uso</p>
+            <br>
+            <p>Para añadir parametros nosotros tenemos usar la nomenclatura ":nombre-parametro"</p>
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <hr>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Output , EventEmitter } from '@angular/core';
+import { Menu } from 'src/app/shared/models/menu.model';
 
 @Component({
   selector: 'app-navbar',
@@ -9,11 +10,11 @@ export class NavbarComponent implements OnInit {
 
   @Output() seleccionarPagina = new EventEmitter();
 
-  menu = [
-    {nombre: 'Inicio',ruta: '/tienda/inicio', active: true},
-    {nombre: 'Tienda',ruta: '/tienda/catalogo'},
-    {nombre: 'Nosotros',ruta: '/tienda/nosotros'},
-    {nombre: 'Contactanos',ruta: '/tienda/contactanos'}
+  menu: Menu[] = [
+    {nombre: 'Inicio',ruta: '/tienda/inicio', desactivado: false},
+    {nombre: 'Tienda',ruta: '/tienda/catalogo', desactivado: false},
+    {nombre: 'Nosotros',ruta: '/tienda/nosotros', desactivado: false},
+    {nombre: 'Contactanos',ruta: '/tienda/contactanos', desactivado: false}
   ];
 
 
@@ -22,6 +23,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
   // cambiarPagina(paramRuta: string){
   //   // alert(`Deberia cambiar a la ${paramRuta}`);
