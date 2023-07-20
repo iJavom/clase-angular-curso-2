@@ -9,6 +9,7 @@ import { NosotrosComponent } from './tienda/nosotros/nosotros.component';
 import { ContactanosComponent } from './tienda/contactanos/contactanos.component';
 import { RoutejemUnoComponent } from './clases/routing/routejem-uno/routejem-uno.component';
 import { RoutejemDosComponent } from './clases/routing/routejem-dos/routejem-dos.component';
+import { ProductoComponent } from './tienda/producto/producto.component';
 
 const routes: Routes = [
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   ]},
   {path: '', redirectTo: 'tienda', pathMatch: 'full'},
   {path: 'tienda', component: TiendaComponent, children:[
+    { path: 'producto', component: ProductoComponent},
     {path:'inicio', component: InicioComponent},
     {path:'catalogo', component: CatalogoComponent},
     {path:'nosotros', component: NosotrosComponent},

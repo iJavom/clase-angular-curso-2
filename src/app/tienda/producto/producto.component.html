@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <h1 class="text-center mt-3 mb-5">Gestión de Producto</h1>
+    </div>
+    <div class="row">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" [(ngModel)]="producto.title" name="titulo" id="titulo" placeholder="Inserte un titulo">
+        </div>
+        <div class="mb-3">
+            <label for="precio" class="form-label">Precio</label>
+            <input type="number" class="form-control" [(ngModel)]="producto.price" name="precio" id="precio" placeholder="Inserte el precio">
+        </div>
+        <div class="mb-3">
+            <label for="descripcion" class="form-label">Descripcion</label>
+            <textarea class="form-control" [(ngModel)]="producto.description" name="descripcion" id="descripcion" rows="3" placeholder="Describa el articulo"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="categoria" class="form-label">Categoria</label>
+            <input type="text" class="form-control" [(ngModel)]="producto.category" name="categoria" id="categoria" placeholder="Inserte una categoria">
+        </div>
+        <div class="mb-3">
+            <label for="imagen" class="form-label">Imagen (URL)</label>
+            <input type="text" class="form-control" [(ngModel)]="producto.image" name="imagen" id="imagen" placeholder="Inserte el enlaced de una imagen">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <button class="mb-3 w-100 btn btn-light" [routerLink]="'/tienda/catalogo'">Regresar</button>
+        </div>
+        <div class="col-md-4">
+            <button class="mb-3 w-100 btn btn-danger">Eliminar</button>
+        </div>
+        <div class="col-md-4">
+            <button class="mb-3 w-100 btn btn-success" (click)="guardar()">Guardar</button>
+
+        </div>
+    </div>
+</div>

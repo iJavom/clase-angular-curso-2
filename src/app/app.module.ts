@@ -24,6 +24,10 @@ import { RoutejemDosComponent } from './clases/routing/routejem-dos/routejem-dos
 import { ModelsComponent } from './clases/models/models.component';
 import { ServicesComponent } from './clases/services/services.component';
 import { EjemploService } from './shared/services/ejemplo.service';
+import { HttpclientComponent } from './clases/httpclient/httpclient.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TarjetaComponent } from './tienda/catalogo/tarjeta/tarjeta.component';
+import { ProductoComponent } from './tienda/producto/producto.component';
 
 
 @NgModule({
@@ -47,12 +51,16 @@ import { EjemploService } from './shared/services/ejemplo.service';
     RoutejemUnoComponent,
     RoutejemDosComponent,
     ModelsComponent,
-    ServicesComponent
+    ServicesComponent,
+    HttpclientComponent,
+    TarjetaComponent,
+    ProductoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [EjemploService],
   bootstrap: [AppComponent]
