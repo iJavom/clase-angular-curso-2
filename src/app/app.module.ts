@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentesComponent } from './clases/componentes/componentes.component';
 import { BindingComponent } from './clases/binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EjercicioCalculadoraComponent } from './clases/ejercicio-calculadora/ejercicio-calculadora.component';
 import { DirectivesComponent } from './clases/directives/directives.component';
 import { ClasesComponent } from './clases/clases.component';
@@ -28,6 +28,7 @@ import { HttpclientComponent } from './clases/httpclient/httpclient.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TarjetaComponent } from './tienda/catalogo/tarjeta/tarjeta.component';
 import { ProductoComponent } from './tienda/producto/producto.component';
+import { ReactFormComponent } from './clases/react-form/react-form.component';
 
 
 @NgModule({
@@ -54,13 +55,15 @@ import { ProductoComponent } from './tienda/producto/producto.component';
     ServicesComponent,
     HttpclientComponent,
     TarjetaComponent,
-    ProductoComponent
+    ProductoComponent,
+    ReactFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [EjemploService],
   bootstrap: [AppComponent]

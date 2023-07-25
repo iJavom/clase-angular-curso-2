@@ -1,1 +1,29 @@
-<p>contactanos works!</p>
+
+<div class="container">
+    <h1 class="text-center mt-3">Contactanos</h1>
+    <div class="row">
+        <form [formGroup]="formContactanos" (ngSubmit)="enviar()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input formControlName="nombre" type="text" class="form-control" id="nombre" placeholder="Inserte su nombre">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input formControlName="email" type="text" class="form-control" id="email" placeholder="Inserte su email">
+                <div class="text-danger" *ngIf="formContactanos.get('email')?.status == 'INVALID' &&  formContactanos.get('email')?.touched">
+                    Por favor usa un correo valido!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Telefono</label>
+                <input formControlName="telefono" type="text" [minLength]="7" class="form-control" id="telefono" placeholder="Inserte su telefono">
+            </div>
+            <div class="mb-3">
+                <label for="motivo" class="form-label">Explicanos ¿Por que nos contactas?</label>
+                <textarea  formControlName="motivo" class="form-control" id="motivo" rows="3" placeholder="Exprese aca"></textarea>
+            </div>
+
+            <button class="btn btn-primary w-100" [disabled]="formContactanos.status === 'INVALID'" type="submit">Enviar</button>
+        </form>
+    </div>
+</div>

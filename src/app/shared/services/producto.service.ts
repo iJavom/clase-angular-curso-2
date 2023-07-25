@@ -17,9 +17,20 @@ export class ProductoService {
     return this.http.get<Producto[]>(`${this.apiUrl}products`);
   }
 
-  //obtenerProducto //NOTESE QUE ES SINGULAR
+  obtenerProducto(idProducto: number){//NOTESE QUE ES SINGULAR
+    return this.http.get<Producto>(`${this.apiUrl}products/${idProducto}`);
+  } 
 
   crearProducto(paramProducto: Producto){
     return this.http.post(`${this.apiUrl}products`, paramProducto);
+  }
+
+  editarProducto(paramProducto: Producto){
+    return this.http.put(`${this.apiUrl}products/${paramProducto.id}`, paramProducto);
+  }
+
+
+  eliminarProducto(idProducto: number){
+    return this.http.delete(`${this.apiUrl}products/${idProducto}`);
   }
 }

@@ -26,6 +26,7 @@ const routes: Routes = [
   ]},
   {path: '', redirectTo: 'tienda', pathMatch: 'full'},
   {path: 'tienda', component: TiendaComponent, children:[
+    { path: 'producto/:idProducto', component: ProductoComponent},
     { path: 'producto', component: ProductoComponent},
     {path:'inicio', component: InicioComponent},
     {path:'catalogo', component: CatalogoComponent},

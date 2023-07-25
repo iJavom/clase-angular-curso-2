@@ -3,13 +3,22 @@
         <h4>Http Client</h4>
     </div>
     <div class="row">
-        <p>El http client es un modulo pertenciente a la libreria de angular/common/http y es la encargada de gestionar nuestras peticiones http. Para hacer uso de ella tenemos que importarla en nuestro modulo</p>
-        <br>
-        <p>Los metodos que podemos usar ed la libreria son:</p>
-        <br>
-        <ul>
-            <li><strong>GET:</strong> Sirve para hacer solicitudes de obtencion de datos. Este solo llevara un parametro que es la url y se le pueden concatenar query params (Se pueden añadir mas parametros para dar opciones) </li>
-            <li><strong>POST:</strong>Sirve para hacer insercciones o crear datos de un elemento que generalmente tiene la forma de nuestro modelo, y puede ir en un formato especificado (JSON/XML/Text) que usalmente es json. Manda 2 parametros donde el primero es el link destino y el segundo es el body, adicional se puede mandar opciones</li>
-        </ul>
+        <div class="col-md-9">
+            <p>El http client es un modulo pertenciente a la libreria de angular/common/http y es la encargada de gestionar nuestras peticiones http. Para hacer uso de ella tenemos que importarla en nuestro modulo</p>
+            <br>
+            <p>Los metodos que podemos usar ed la libreria son:</p>
+            <br>
+            <ul>
+                <li><strong>GET:</strong> Sirve para hacer solicitudes de obtencion de datos. Este solo llevara un parametro que es la url y se le pueden concatenar query params (Se pueden añadir mas parametros para dar opciones) </li>
+                <li><strong>POST:</strong>Sirve para hacer insercciones o crear datos de un elemento que generalmente tiene la forma de nuestro modelo, y puede ir en un formato especificado (JSON/XML/Text) que usalmente es json. Manda 2 parametros donde el primero es el link destino y el segundo es el body, adicional se puede mandar opciones</li>
+                <li><strong>PUT:</strong>*****PENDIENTE PORQUE FAKESTORE API FALLO*******</li>
+                <li><strong>DELETE:</strong> Sirve para hacer solicitudes de eliminacion de datos. Lleva solo 1 parametro qeu es el link y generalmente hace uso de queryparams (parametros en el link ya sean despues de un slash"/" o despues los simbolos "?" y "&") para poder eliminar. (Opcionalmente se pueden mandar opciones)</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h4>Ejemplo:</h4>
+            <strong>Revisar el service de producto</strong>
+        </div>
     </div>
+    <hr>
 </div>

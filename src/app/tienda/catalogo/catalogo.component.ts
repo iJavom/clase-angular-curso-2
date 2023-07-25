@@ -18,7 +18,7 @@ export class CatalogoComponent implements OnInit {
         this.productos = data;
       },
       (error)=>{//Error: Sirve para capturar los mensajes de error
-        alert(error.message);
+        alert("El servidor arrojo un mensaje: "+JSON.stringify(error));
       },
       ()=>{//Complete: Sirve para ejecutar algo haya sido exitoso o no
 
