@@ -21,6 +21,12 @@
     </div>
     <div class="col-md-3">
       <h4>Ejemplo:</h4>
+      <form [formGroup]="variableElFormulario">
+        <input type="text" formControlName="inputEjemplo">
+        <button class="btn btn-primary" (click)="obtener()">Obtenemos</button>
+        <button class="btn btn-primary" (click)="asignar()">Asignamos</button>
+      </form>
     </div>
   </div>
+  <hr>
 </div>

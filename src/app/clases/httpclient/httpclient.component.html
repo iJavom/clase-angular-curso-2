@@ -11,7 +11,7 @@
             <ul>
                 <li><strong>GET:</strong> Sirve para hacer solicitudes de obtencion de datos. Este solo llevara un parametro que es la url y se le pueden concatenar query params (Se pueden añadir mas parametros para dar opciones) </li>
                 <li><strong>POST:</strong>Sirve para hacer insercciones o crear datos de un elemento que generalmente tiene la forma de nuestro modelo, y puede ir en un formato especificado (JSON/XML/Text) que usalmente es json. Manda 2 parametros donde el primero es el link destino y el segundo es el body, adicional se puede mandar opciones</li>
-                <li><strong>PUT:</strong>*****PENDIENTE PORQUE FAKESTORE API FALLO*******</li>
+                <li><strong>PUT:</strong>Sirve para hacer actualizaciones en los datos. Dependera de la forma que el backend lo solicite pero cuando llamamos nuestro metodo PUT, tenemos que pasar dos parametros siendo el primero la URL/link  y el segundo el body (Puede venir un tercer parametros que son las opciones) </li>
                 <li><strong>DELETE:</strong> Sirve para hacer solicitudes de eliminacion de datos. Lleva solo 1 parametro qeu es el link y generalmente hace uso de queryparams (parametros en el link ya sean despues de un slash"/" o despues los simbolos "?" y "&") para poder eliminar. (Opcionalmente se pueden mandar opciones)</li>
             </ul>
         </div>
