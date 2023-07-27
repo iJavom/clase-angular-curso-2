@@ -4,7 +4,25 @@
     <div class="row">
         <div class="col-md-3">
             <button class="btn btn-success w-100" [routerLink]="'/tienda/producto'">Añadir producto</button>
-            <h4>Aqui iran los filtros</h4>
+            <div class="mb-3">
+                <label for="cantidad" class="form-label">Items por pagina</label>
+                <input type="number" [(ngModel)]="cantidadPorPagina" class="form-control" id="cantidad" placeholder="Items por pagina">
+            </div>
+            <!-- <select class="form-select" [(ngModel)]="categoriaSeleccionada" name="categoria">
+                <option selected [value]="''">Seleccione una categoria</option>
+                <option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</option>
+            </select> -->
+            <!-- <ng-select [(ngModel)]="categoriaSeleccionada">
+                <ng-option *ngFor="let categoria of categorias" [value]="categoria">{{categoria}}</ng-option>
+             </ng-select> -->
+            <ng-select [items]="categorias" 
+                bindLabel="categorias" 
+                bindValue="categorias" 
+                [(ngModel)]="categoriaSeleccionada"
+                notFoundText="No hay coincidencias"
+                placeholder="Seleccione un valor">
+            </ng-select>
+            <button (click)="refrescar()" class="btn btn-info w-100">Filtrar</button>
         </div>
         <div class="col-md-9">
             <div class="row" *ngFor="let producto of productos">

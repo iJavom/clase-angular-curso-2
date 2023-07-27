@@ -10,6 +10,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ProductoComponent } from './producto/producto.component';
 import { TiendaComponent } from './tienda.component';
 import { SharedModule } from '../shared/shared.module';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 
 
@@ -27,7 +28,9 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     TiendaRoutingModule,
-    SharedModule
+    SharedModule,
+    NgSelectModule,
+ 
   ],
 })
 export class TiendaModule { }

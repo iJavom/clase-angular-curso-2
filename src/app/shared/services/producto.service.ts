@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Producto } from '../models/producto.model';
 import { environment } from 'src/environments/environment';
@@ -12,13 +12,27 @@ export class ProductoService {
   apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
+  //Nos vemos a las 8:15 - 20:15
+  obtenerProductos(cantidad?:number, categoria?: string){
+      let query="";
+      if(cantidad){
+        query=`?limit=${cantidad}`
+      }
+      let queryCategoria= "";
+      if(categoria){
+        queryCategoria=`/category/${categoria}`
+      }
 
-  obtenerProductos(){
-    return this.http.get<Producto[]>(`${this.apiUrl}products`);
+      return this.http.get<Producto[]>(`${this.apiUrl}products${queryCategoria}${query}`);
+    
   }
 
   obtenerProducto(idProducto: number){//NOTESE QUE ES SINGULAR
-    return this.http.get<Producto>(`${this.apiUrl}products/${idProducto}`);
+    const encabezado = new HttpHeaders().set('Tokeeen', 'Alguntokenasjldhqiwhieodh'); 
+    const options = {
+      headers : encabezado
+    }
+    return this.http.get<Producto>(`${this.apiUrl}products/${idProducto}`,options);
   } 
 
   crearProducto(paramProducto: Producto){
